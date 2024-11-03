@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href = "login_style.css">
+
+  <title>Home Page</title>
+	
+	<style>
+		body {
+			background-image: url('background.jpg');
+			background-position: center ;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% ;
+		}
+		</style>
+			<link rel = "icon" href = "lllgg.png" type = "image/x-icon"> 
+</head>
+<body>
+	<header class="header">
+		<div><img src="logo123.png" alt="Image" height="45" ></div>
+		<nav class="nav">
+				
+						<a href="index.html">Home</a>
+						<a href="about.html">About</a>
+						<a href="contact.html">Contact</a>
+						<a href="services">Services</a>
+						<a href="learn">Learn</a>
+				     <span></span>
+		</nav>
+	</header>
+
+	<div id ="myDiv">
+		<div id="logo">
+			<img src="logo944.png" width="300px">
+		</div>
+		
+    <div class="dots-3"></div>
+	</div>
+  <div id="container" class="container">
+		
+		
+		<div class="row">
+			
+			
+			<div class="col align-items-center flex-col sign-up">
+				<div class="form-wrapper align-items-center">
+					<div class="form sign-up">
+						<form action="index.html">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input id = "email-signup" type = "email" placeholder = "Email *" required></input>
+						</div>
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input id = "username-signup" type = "name" placeholder = "Username *" required></input>
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input id = "password-signup" type = "password" placeholder = "Password *" required></input>
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input id = "confirm-password-signup" type = "password" placeholder = "Confirm Password *" required></input>
+						</div>
+						<a href="index.html">
+						<button id = "create-acct-btn">Create Account</button>
+				  	</a>
+				  	</form>
+						<p>
+							<span style="color: antiquewhite;">
+								Already have an account?
+							</span>
+							<b onclick="toggle()" class="pointer">
+								<div  style="color: antiquewhite;">Sign in here</div>
+							</b>
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="col align-items-center flex-col sign-in">
+				<div class="form-wrapper align-items-center">
+					
+					<div class="form sign-in">
+					  <form action="start.html">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input id = "email" type = "email" placeholder = "Email &#42;" required></input>
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input id = "password" type = "password" placeholder = "Password &#42;" required></input>
+						</div>
+						<a href="start.html">
+						<button id = "submit">Submit</button>
+					 </a>
+					  </form>
+						<p>
+					
+							<b class="forget-btn pointer"style="color: antiquewhite;">
+								Forgot password?
+							</b>
+						</p>
+						<p>
+							<span style="color: antiquewhite;">
+								Don't have an account?
+							</span>
+							<b onclick="toggle()" class="pointer" style="color: antiquewhite;">
+								Sign up here
+							</b>
+						</p>
+					</div>
+				</div>
+				<div class="form-wrapper">
+				</div>
+			</div>
+		
+			
+		</div>
+		
+		<div class="row content-row">
+			
+			<div class="col align-items-centerflex-col">
+				<div class="text sign-in">
+					<h2 style="padding-right: 20%;">
+						Happy to see you 
+					</h2>
+				</div>
+				<div class="img sign-in">
+				</div>
+			</div>
+			
+			<div class="col align-items-center flex-col">
+				<div class="img sign-up">
+				</div>
+				<div class="text sign-up">
+					<h2>
+						Team Quizzo Welcomes you 
+					</h2>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<script>
+
+		document.querySelector(".container").classList.add("hidden");
+		setTimeout(function(){
+			document.getElementById("myDiv").style.display = "none";
+			document.querySelector(".container").classList.remove("hidden");
+		},5000);
+    
+		let container = document.getElementById('container')
+		toggle = () => {
+			container.classList.toggle('sign-in')
+			container.classList.toggle('sign-up')
+		}
+		setTimeout(() => {
+			container.classList.add('sign-in')
+		}, 5200)
+	</script>
+	
+</body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+	<script src="login_script.js"> </script>
+</html>
